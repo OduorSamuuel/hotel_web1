@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="card.css">
+   
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <p>Payment methods</p>
+            <hr>
+            <div class="methods">
+                <div onclick="selectPayment('paypal')">
+                    <i class="fa-solid fa-wallet"></i> Payment by PayPal
+                </div>
+			
+                <div onclick="selectPayment('mpesa')">
+                    <i class="fas fa-mobile-alt"></i> Payment by Mpesa
+                </div>
+            </div>
+          
+        </div>
+		<div class="center">
+			<div class="card-details" id="card-details">
+				<form id="paymentForm">
+					<div class="email" id="email-field">
+						<img src="../../../public/assets/images/paypal.jpeg" alt="" class="image1">
+						<p>Email</p>
+						<input type="email" placeholder="example@example.com" id="email" required>
+					</div>
+					<div class="mpesa" id="mpesa-field" style="display:none;">
+						<img src="../../../public/assets/images/mpesa.jpeg" alt="" class="image1">
+						<p>Phone Number</p>
+						<input type="tel" placeholder="Mpesa Phone Number" id="mpesa-number" required>
+					</div>
+					<button type="button" onclick="processPayment()">PAY NOW</button>
+				</form>
+			</div>
+		</div>
+		
+        <div class="right">
+			<p>Order information</p>
+		
+			<div class="details">
+				<div class="order-description">
+					<div>Order Description</div>
+					<div>Premium Room - 4 nights, 2 adults</div>
+					<div>Total: $200</div>
+			</div>
+		
+		</div>
+    </div>
+	<script src="card.js" defer></script>
+</body>
+</html>
